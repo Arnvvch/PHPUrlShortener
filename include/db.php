@@ -1,0 +1,10 @@
+<?php
+$db = new SQLite3('link.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+
+$db->query('CREATE TABLE IF NOT EXISTS "Shortener" (
+    ID TEXT PRIMARY KEY NOT NULL,
+    URL TEXT NOT NULL,
+    VISITS TEXT NOT NULL,
+    ADS TEXT NOT NULL
+)');
+?>
